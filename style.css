@@ -63,10 +63,9 @@ body {
 }
 
 .button button {
-    text-align: center;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color:  #c69bf7;
     background-color: #FAF9EE;
     padding: 10px 20px;
