@@ -1,117 +1,194 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F8F9FA; /* Fundo cinza bem claro, quase branco (ótimo para leitura) */
-    margin: 0;
-    padding: 0;    
+    background-color: #F8F9FA;
+    color: #334155;
+    -webkit-print-color-adjust: exact; 
+    print-color-adjust: exact;
 }
 
+/* CONTAINER EM DUAS COLUNAS  */
 .container {
-    max-width: 850px;                 
-    margin: 30px auto;              
-    background: #FFFFFF; /* Fundo do currículo puro branco */                
-    padding: 40px;                    
-    box-shadow: 0 4px 12px rgba(0,0,0,.05); /* Sombra bem leve e profissional */
-    border-radius: 8px;             
+    max-width: 920px; 
+    margin: 30px auto;
+    background: #FFFFFF;
+    display: flex; 
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 1120px; 
 }
 
-.header {
-    text-align: center;              
-    margin-bottom: 30px;            
-    border-bottom: 2px solid #E9ECEF; /* Linha sutil para separar o cabeçalho */
-    padding-bottom: 20px;
+/* COLUNA DA ESQUERDA */
+.sidebar {
+    width: 32%; 
+    background-color: #2C3E35; 
+    color: #ECF0F1;
+    padding: 30px 20px; 
 }
 
-.container img {
-    display: block;
-    margin: 0 auto 15px;
-}
-
-.header img {
-    width: 130px;                     
-    height: 130px;                    
-    object-fit: cover;                
-    border-radius: 50%;               
-    border: 3px solid #1E293B; /* Borda azul escura elegante */
-}
-
-.header h1 {              
-    color: #1E293B; /* Azul escuro/petróleo para o nome ter máximo destaque */
-    margin: 10px 0 5px 0;
-    font-size: 28px;
-}
-
-.header p {
-    color: #64748B; /* Cinza médio para as informações de contato */
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.header a {
-    color: #0F766E; /* Azul esverdeado para os links (Discreto e clicável) */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.header a:hover {
-    text-decoration: underline;
-}
-
-.body h2 {
-    color: #0F766E; /* Tom profissional para os títulos das seções */
-    font-size: 18px;
-    text-transform: uppercase; /* Deixa os títulos em maiúsculo */
-    letter-spacing: 0.5px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #E2E8F0; /* Linha fina abaixo de cada seção */
-    padding-bottom: 5px;
-}
-
-.body p, .body li {
-    color: #334155; /* Cinza grafite escuro (Muito melhor que o preto puro para ler) */
-    font-size: 15px;
-    line-height: 1.6; /* Melhora o espaçamento entre as linhas */
-}
-
-.body b {
-    color: #1E293B; /* Negrito ligeiramente mais escuro para destacar cargos/cursos */
-}
-
-.button {
+.profile-box {
     text-align: center;
-    margin-top: 25px;
     margin-bottom: 25px;
 }
 
-/* Estilo do botão de imprimir */
-.button button {
-    font-size: 15px;
+.profile-img {
+    width: 130px; 
+    height: 130px;                    
+    object-fit: cover;                
+    border-radius: 50%;               
+    border: 3px solid #0F766E;
+    background-color: #fff;
+}
+
+.sidebar-section {
+    margin-bottom: 25px;
+}
+.sidebar-section a {
+    color: #64FFDA;
+    text-decoration: underline;
+}
+.sidebar-section h3 {
+    font-size: 15px; 
+    text-transform: uppercase;
+    color: #0F766E; 
+    border-bottom: 1px solid #455A64;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-section p {
+    font-size: 13.5px; 
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #E2E8F0;
+}
+
+.sidebar-section b {
+    color: #FFFFFF;
+}
+
+.sidebar-section a {
+    color: #64FFDA;
+    text-decoration: none;
+    font-size: 13.5px; 
+}
+
+.email-text {
+    font-size: 12px; 
+}
+
+/* COLUNA DA DIREITA (CONTEÚDO PRINCIPAL) */
+.main-content {
+    width: 68%;
+    padding: 40px 35px; 
+}
+
+.main-header {
+    margin-bottom: 25px;
+}
+
+.main-header h1 {
+    font-size: 32px; 
+    color: #1E293B;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.main-header h2 {
+    font-size: 22px; 
+    color: #64748B;
+    font-weight: normal;
+    margin-top: 4px;
+}
+
+.main-section {
+    margin-bottom: 22px;
+}
+
+.main-section h3 {
+    font-size: 17px; 
+    color: #0F766E;
+    text-transform: uppercase;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.main-content p, .main-content li {
+    font-size: 14.5px; 
+    line-height: 1.5;
+    color: #334155;
+}
+
+.main-section ul {
+    padding-left: 20px;
+    margin-top: 6px;
+}
+
+.main-section li {
+    margin-bottom: 4px;
+}
+
+.item {
+    margin-bottom: 12px;
+}
+
+.item h4 {
+    font-size: 15px; 
+    color: #1E293B;
+    font-weight: bold;
+}
+
+/* BOTÃO DE IMPRESSÃO */
+.button-container {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.button-container button {
+    font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: 6px;
     color: #FFFFFF;
-    background-color: #1E293B; /* Botão sóbrio */
-    padding: 12px 24px;
+    background-color: #1E293B;
+    padding: 14px 28px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,.1);
-    transition: background-color 0.2s;
 }
 
-.button button:hover {
-    background-color: #0F766E; /* Muda de cor suavemente ao passar o mouse */
+.button-container button:hover {
+    background-color: #0F766E;
 }
 
-/* Regra importante para quando for imprimir em papel (esconde o botão e ajusta as margens) */
+/* AJUSTE PRECIOSO PARA A IMPRESSÃO CONTINUAR EM 1 PÁGINA */
 @media print {
+    @page {
+        size: A4;
+        margin: 0; 
+    }
     body {
         background-color: #FFFFFF;
     }
     .container {
         box-shadow: none;
         margin: 0;
-        padding: 0;
+        border-radius: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh; 
     }
-    .button {
-        display: none; /* Esconde o botão na folha impressa */
+    .button-container {
+        display: none;
     }
 }
