@@ -1,75 +1,117 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #FFF2EB;
+    background-color: #F8F9FA; /* Fundo cinza bem claro, quase branco (ótimo para leitura) */
     margin: 0;
     padding: 0;    
 }
 
 .container {
-    max-width: 900px;                 
-    margin: 40px auto;              
-    background: #FAF9EE;                 
-    padding: 30px;                    
-    box-shadow: 0 4px 10px rgba(0,0,0,.1); 
-    border-radius: 10px;             
+    max-width: 850px;                 
+    margin: 30px auto;              
+    background: #FFFFFF; /* Fundo do currículo puro branco */                
+    padding: 40px;                    
+    box-shadow: 0 4px 12px rgba(0,0,0,.05); /* Sombra bem leve e profissional */
+    border-radius: 8px;             
 }
 
 .header {
     text-align: center;              
-    margin-bottom: 20px;            
+    margin-bottom: 30px;            
+    border-bottom: 2px solid #E9ECEF; /* Linha sutil para separar o cabeçalho */
+    padding-bottom: 20px;
 }
+
 .container img {
     display: block;
     margin: 0 auto 15px;
 }
 
 .header img {
-    width: 150px;                     
-    height: 150px;                    
+    width: 130px;                     
+    height: 130px;                    
     object-fit: cover;                
     border-radius: 50%;               
-    border: 3px solid #B6B09F;
+    border: 3px solid #1E293B; /* Borda azul escura elegante */
 }
 
 .header h1 {              
-    color: #F5BABB;
+    color: #1E293B; /* Azul escuro/petróleo para o nome ter máximo destaque */
+    margin: 10px 0 5px 0;
+    font-size: 28px;
 }
 
 .header p {
-    color: #FF8BA7;
+    color: #64748B; /* Cinza médio para as informações de contato */
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.header a {
+    color: #0F766E; /* Azul esverdeado para os links (Discreto e clicável) */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header a:hover {
+    text-decoration: underline;
 }
 
 .body h2 {
-    color: #c69bf7;
-    text-align: left;
-    margin: 0 auto ;
+    color: #0F766E; /* Tom profissional para os títulos das seções */
+    font-size: 18px;
+    text-transform: uppercase; /* Deixa os títulos em maiúsculo */
+    letter-spacing: 0.5px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E2E8F0; /* Linha fina abaixo de cada seção */
+    padding-bottom: 5px;
 }
 
-.body p {
-    color: #F29696;
+.body p, .body li {
+    color: #334155; /* Cinza grafite escuro (Muito melhor que o preto puro para ler) */
+    font-size: 15px;
+    line-height: 1.6; /* Melhora o espaçamento entre as linhas */
 }
 
 .body b {
-    color: #F29696;
+    color: #1E293B; /* Negrito ligeiramente mais escuro para destacar cargos/cursos */
 }
 
-.body li{
-    color: #F29696;
-}
-
-.button{
+.button {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
+/* Estilo do botão de imprimir */
 .button button {
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
     border: none;
-    border-radius: 10px;
-    color:  #c69bf7;
-    background-color: #FAF9EE;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 6px;
+    color: #FFFFFF;
+    background-color: #1E293B; /* Botão sóbrio */
+    padding: 12px 24px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    transition: background-color 0.2s;
+}
+
+.button button:hover {
+    background-color: #0F766E; /* Muda de cor suavemente ao passar o mouse */
+}
+
+/* Regra importante para quando for imprimir em papel (esconde o botão e ajusta as margens) */
+@media print {
+    body {
+        background-color: #FFFFFF;
+    }
+    .container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+    .button {
+        display: none; /* Esconde o botão na folha impressa */
+    }
 }
